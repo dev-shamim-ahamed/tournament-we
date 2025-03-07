@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Khelo web - Made For True Gamers!</title>
+  <meta name="title" content="Khelo Web - Made For True Gamers!">
+  <meta name="description" content="This web made by shamim">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Work+Sans:wght@600&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-bg.png">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header active" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+  <img src="./assets/images/logo.svg" width="70" height="63" alt="home" style="border-radius: 50%;">
+</a>
+
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#tournament" class="navbar-link" data-nav-link>video</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#news" class="navbar-link" data-nav-link>news</a>
+          </li>
+          
+          <li class="navbar-item">
+            <a href="./pages/download.html" class="navbar-link" data-nav-link>Download Page</a>
+          </li>
+
+          
+            <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>contact us</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      
+
+      <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <div class="hero has-before" id="home">
+    <div class="container">
+        <p class="section-subtitle">Welcome To Khelo web</p>
+        <h1 class="hero-title">বাংলাদেশের সেরা গেমিং টুর্নামেন্ট প্লাটফর্ম</h1>
+
+        <div class="hero-content">                   
+            <div class="hero-banner">
+                <img src="./assets/images/hero-banner.png" width="850" height="414" alt="Hero banner showcasing gaming tournaments" class="hero-image">
+                <img src="./assets/images/hero-banner-bg.png" alt="Background image" class="hero-banner-bg">
+            </div>
+            <br>
+            <div class="card-buttons">               
+    <a href="#" class="card-button telegram">Join Us on Telegram</a>
+     <a href="./pages/download.html" class="card-button">Download Now</a>
+    
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+      <!-- 
+        - #UPCOMING
+      -->
+
+      <section class="section upcoming" aria-labelledby="upcoming-label" id="tournament">
+        <div class="container">
+
+<style>
+    .video-player {
+            position: relative;
+            max-width: 900px;
+            background-color: #1f242d;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+         .video {
+            width: 100%;
+            height: auto;
+            cursor: pointer;            
+        }
+
+        .video-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: opacity 0.3s ease;
+        }
+
+        .control-button {
+            background: none;
+            border: none;
+            color: #0ef;
+            cursor: pointer;
+            font-size: 24px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .control-button:hover {
+            color: #fff;
+            transform: scale(1.2);
+        }
+
+         .progress-bar {
+            flex-grow: 1;
+            margin: 0 12px;
+            height: 5px;
+            appearance: none;
+            background: #0ef;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        .progress-bar::-webkit-slider-thumb {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+
+        .progress-bar::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .time-display {
+            transition: opacity 0.3s ease;
+        }
+</style>
+          
+          <h2 class="h2 section-title" data-reveal="bottom">
+            Tutorial <span class="span">video</span>
+          </h2>
+          <p class="section-text" data-reveal="bottom">
+            সম্পূর্ণ ভিডিওটি দেখুন।
+          </p>
+          <ol class="video">          
+    <div class="video-player">
+        <video id="mainVideo" class="video" poster="thumbnail.jpg" preload="metadata">
+            <source src="m.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-controls">
+            <button id="playPause" class="control-button">
+                <ion-icon name="play-outline"></ion-icon>
+            </button>
+            <span class="time-display" id="currentTime">0:00</span> / <span class="time-display" id="totalTime">0:00</span>
+            <input id="progressBar" type="range" min="0" max="100" value="0" class="progress-bar">
+            <button id="fullscreen" class="control-button">
+                <ion-icon name="expand-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
+          </ol>
+        </div>
+      </section>
+
+      <!-- 
+        - #NEWS
+      -->
+
+      <section class="section news" aria-label="our latest news" id="news">
+        <div class="container">
+
+          
+
+          <h2 class="h2 section-title" data-reveal="bottom">
+            FAQ And <span class="span">Headlines</span>
+          </h2>
+
+          <p class="section-text" data-reveal="bottom">
+            KHELO WEB  সব সময় আপনাদের পাশে আছে এবং সর্বোচ্চটা দিয়ে সাহায্য করে যাবে। আপনাদের সাফল্যই আমাদের অনুপ্রেরণা।
+          </p>
+
+          <ul class="news-list">
+
+            <li data-reveal="bottom">
+              <div class="news-card">
+
+                <figure class="card-banner img-holder" style="--width: 600; --height: 400; border-radius: 15px;">
+                  <img src="./assets/images/news-1.jpeg" width="600" height="400" style="border-radius: 15px;" loading="lazy"
+                    alt="Innovative Business All Over The World." class="img-cover">
+                </figure>
+
+                <div class="card-content">                  
+
+                  <ul class="card-meta-list">                    
+
+                    <li class="card-meta-item">
+                      <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                      <p class="card-meta-text">Khelo WEB</p>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Customer Support</a>
+                  </h3>
+
+                  <p class="card-text">
+                    KHELO WEB অ্যাপসে আপনার পাচ্ছেন ২৪ ঘন্টা পর্যন্ত কাস্টমার সাপোর্ট সুবিধা ।
+                  </p>                 
+                </div>
+
+              </div>
+            </li>
+
+            <li data-reveal="bottom">
+              <div class="news-card">
+
+                <figure class="card-banner img-holder" style="--width: 600; --height: 400; border-radius: 15px;">
+                  <img src="./assets/images/news-2.jpeg" width="600" height="400" style="border-radius: 15px;" loading="lazy"
+                    alt="Innovative Business All Over The World." class="img-cover">
+                </figure>
+
+                <div class="card-content">                  
+
+                  <ul class="card-meta-list">                    
+
+                    <li class="card-meta-item">
+                      <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                      <p class="card-meta-text">Khelo Web</p>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Daily Tournament</a>
+                  </h3>
+
+                  <p class="card-text">
+                    KHLEO WEB অ্যাপসে আপনার পাচ্ছেন ডেইলি আনলিমিটেড ফ্রি এবং পেইড টুর্নামেন্ট। যেখান থেকে হাসি-খুশি খেলতে খেলতে টাকা ইনকাম করতে পারবেন ।
+                  </p>                 
+                </div>
+
+              </div>
+            </li>
+
+            <li data-reveal="bottom">
+              <div class="news-card">
+
+                <figure class="card-banner img-holder" style="--width: 600; --height: 400; border-radius: 15px;">
+                  <img src="./assets/images/news-3.jpeg" width="600" height="400" style="border-radius: 15px;" loading="lazy"
+                    alt="Innovative Business All Over The World." class="img-cover">
+                </figure>
+
+                <div class="card-content">                  
+
+                  <ul class="card-meta-list">                    
+
+                    <li class="card-meta-item">
+                      <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                      <p class="card-meta-text">Khelo Web</p>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Play To Earn</a>
+                  </h3>
+
+                  <p class="card-text">
+                    KHELO WEB অ্যাপস থেকে আপনার গেমিং এর দক্ষতায় করার সুযোগ করে দিয়েছে।
+                  </p>                 
+                </div>
+
+              </div>
+            </li>
+                  </ul>
+
+                         
+            
+          
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="section footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+  <img src="./assets/images/logo.svg" width="70" height="63" loading="lazy" alt="Unigine logo" style="border-radius: 50%;">
+</a>
+
+          
+          <p class="footer-text">
+            **KHELO WEB  সব সময় আপনাদের পাশে আছে এবং সর্বোচ্চটা দিয়ে সাহায্য করে যাবে। আপনাদের সাফল্যই আমাদের অনুপ্রেরণা।**
+
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
+            </li>
+
+            
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        
+        <div class="footer-list">
+
+          <p class="title footer-list-title has-after">Contact Us</p>
+       
+          <div class="contact-item">
+            <span class="span">Join Us:</span>
+
+            <a href="mailto:Info@unigine.com" class="contact-link">Info@WEB.com</a>
+          </div>
+
+          <div class="contact-item">
+            <span class="span">Phone:</span>
+
+            <a href="0987432" class="contact-link">+1 (234) 567-8910</a>
+          </div>
+        </div>        
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 Shamim All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+  <!-- 
+    - #CUSTOM CURSOR
+  -->
+  <div class="cursor" data-cursor></div>
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
